@@ -6,13 +6,18 @@ import javax.inject.Inject
 class Car() {
     private val TAG = "Car"
 
-    private lateinit var engine: Engine
+    @Inject
+    lateinit var engine: Engine
     private lateinit var wheels: Wheels
 
     @Inject
-    constructor(engine: Engine, wheels: Wheels) : this() {
-        this.engine = engine
+    constructor(wheels: Wheels) : this() {
         this.wheels = wheels
+    }
+
+    @Inject
+    fun setRemoteListener(remote: Remote) {
+        remote.setListener(this)
     }
 
 
