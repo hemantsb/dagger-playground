@@ -1,5 +1,8 @@
 package bit.hemant.git.dagger_playground.dagger
 
+import bit.hemant.git.dagger_playground.car.Rims
+import bit.hemant.git.dagger_playground.car.Tires
+import bit.hemant.git.dagger_playground.car.Wheels
 import dagger.Module
 import dagger.Provides
 

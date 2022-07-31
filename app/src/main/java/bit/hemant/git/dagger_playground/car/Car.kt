@@ -1,4 +1,4 @@
-package bit.hemant.git.dagger_playground.dagger
+package bit.hemant.git.dagger_playground.car
 
 import android.util.Log
 import javax.inject.Inject
@@ -22,6 +22,7 @@ class Car() {
 
 
     fun drive() {
+        engine.start()
         Log.d(TAG, "driving..")
     }
 }
