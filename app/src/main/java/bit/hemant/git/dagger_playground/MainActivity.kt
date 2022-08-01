@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import bit.hemant.git.dagger_playground.car.Car
 import bit.hemant.git.dagger_playground.dagger.CarComponent
 import bit.hemant.git.dagger_playground.dagger.DaggerCarComponent
-import bit.hemant.git.dagger_playground.dagger.DieselEngineModule
 import bit.hemant.git.dagger_playground.databinding.ActivityMainBinding
 import javax.inject.Inject
 
@@ -22,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val carComponent: CarComponent =
             DaggerCarComponent.builder()
-                .dieselEngineModule(DieselEngineModule(100))
+                .horsePower(150)
+                .engineCapacity(3000)
                 .build()
 //        car = carComponent.getCar()
         carComponent.injectMain(this)

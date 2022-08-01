@@ -11,13 +11,17 @@ class DieselEngineModule {
     var horsePower: Int = 0
 
 
-    constructor(horsePower: Int){
-        this.horsePower=horsePower
+    constructor(horsePower: Int) {
+        this.horsePower = horsePower
     }
 
     @Provides
-    fun provideDieselEngine(): Engine{
-        val dieselEngine = DieselEngine(horsePower)
+    fun providesHorsePower(): Int {
+        return horsePower
+    }
+
+    @Provides
+    fun provideDieselEngine(dieselEngine: DieselEngine): Engine {
         return dieselEngine
     }
 
